@@ -16,27 +16,6 @@ const bounds = [
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
   
-  // Загрузка границ Атырауской области (GeoJSON)
-  fetch('atyrau_region.geojson')
-    .then(response => response.json())
-    .then(data => {
-      // Отображаем область с контурами
-      const regionLayer = L.geoJSON(data, {
-        style: {
-          color: '#ff7800', // Оранжевые границы
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.1
-        }
-      }).addTo(map);
-  
-      // Автоматическая подгонка карты под границы области
-      map.fitBounds(regionLayer.getBounds());
-    })
-    .catch(error => {
-      console.error('Ошибка загрузки GeoJSON:', error);
-    });
-  
   // Добавление маркеров для ключевых точек области
   L.marker([47.1167, 51.8833]).addTo(map)
     .bindPopup("<b>Атырау</b><br>Столица области.");
