@@ -20,7 +20,7 @@ h1 {
 
 .popup-image {
     width: 100px; /* Установите нужный размер (например, 100px) */
-    height: auto; /* Сохраняем пропорции */
+    height: 100px;; /* Сохраняем пропорции */
     display: block;
     margin-bottom: 5px;
   }
