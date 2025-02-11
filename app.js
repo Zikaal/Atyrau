@@ -7,7 +7,7 @@ const bounds = [
     const map = L.map('map', {
       center: [47.5, 52.5], // Центр карты (например, Атырау)
       zoom: 7,
-      minZoom: 7,
+      minZoom: 6,
       maxBounds: bounds,
       maxBoundsViscosity: 1.0
     });
